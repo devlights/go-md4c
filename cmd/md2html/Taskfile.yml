@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: build
+  build:
+    cmds:
+      - go build -o md2html main.go
+  run:
+    deps:
+      - build
+    cmds:
+      - echo '# Hello **World**' | ./md2html

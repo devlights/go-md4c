@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: build
+  build:
+    cmds:
+      - go build
+  clean:
+    cmds:
+      - go clean
