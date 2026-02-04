@@ -44,7 +44,7 @@ ldconfig -p | grep md4c
 ## インストール
 
 ```bash
-go get github.com/devlights/md4c
+go get github.com/devlights/go-md4c
 ```
 
 ## 基本的な使い方
