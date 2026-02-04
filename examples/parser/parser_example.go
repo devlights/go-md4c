@@ -28,7 +28,7 @@ func main() {
 `
 
 	callbacks := md4c.Callbacks{
-		EnterBlock: func(blockType int, detail interface{}) error {
+		EnterBlock: func(blockType int, detail any) error {
 			switch blockType {
 			case md4c.BlockH:
 				fmt.Println("Enter: Header")
@@ -43,7 +43,7 @@ func main() {
 			}
 			return nil
 		},
-		LeaveBlock: func(blockType int, detail interface{}) error {
+		LeaveBlock: func(blockType int, detail any) error {
 			switch blockType {
 			case md4c.BlockH:
 				fmt.Println("Leave: Header")
@@ -58,7 +58,7 @@ func main() {
 			}
 			return nil
 		},
-		EnterSpan: func(spanType int, detail interface{}) error {
+		EnterSpan: func(spanType int, detail any) error {
 			switch spanType {
 			case md4c.SpanStrong:
 				fmt.Print("<strong>")
@@ -69,7 +69,7 @@ func main() {
 			}
 			return nil
 		},
-		LeaveSpan: func(spanType int, detail interface{}) error {
+		LeaveSpan: func(spanType int, detail any) error {
 			switch spanType {
 			case md4c.SpanStrong:
 				fmt.Print("</strong>")

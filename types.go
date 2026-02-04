@@ -13,9 +13,9 @@ func (e *ParseError) Error() string {
 
 // Callbacks はマークダウンパース時のコールバック関数群
 type Callbacks struct {
-	EnterBlock func(blockType int, detail interface{}) error
-	LeaveBlock func(blockType int, detail interface{}) error
-	EnterSpan  func(spanType int, detail interface{}) error
-	LeaveSpan  func(spanType int, detail interface{}) error
+	EnterBlock func(blockType int, detail any) error
+	LeaveBlock func(blockType int, detail any) error
+	EnterSpan  func(spanType int, detail any) error
+	LeaveSpan  func(spanType int, detail any) error
 	Text       func(textType int, text string) error
 }

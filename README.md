@@ -102,7 +102,7 @@ fmt.Println(html)
 
 ```go
 callbacks := md4c.Callbacks{
-    EnterBlock: func(blockType int, detail interface{}) error {
+    EnterBlock: func(blockType int, detail any) error {
         switch blockType {
         case md4c.BlockH:
             fmt.Println("見出し開始")
