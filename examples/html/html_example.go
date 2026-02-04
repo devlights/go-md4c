@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/devlights/md4c"
+	"github.com/devlights/go-md4c"
 )
 
 func main() {
