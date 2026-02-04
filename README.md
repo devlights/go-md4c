@@ -1,4 +1,4 @@
-# GoMD4C
+# go-md4c
 
 Go言語用の[MD4C](https://github.com/mity/md4c)ラッパーライブラリです。
 
